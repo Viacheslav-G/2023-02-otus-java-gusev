@@ -39,3 +39,6 @@ out
 
 #Homework1
 hw1.txt
+
+#OS files
+.DS_Store
