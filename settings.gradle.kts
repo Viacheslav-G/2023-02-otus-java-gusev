@@ -1,8 +1,12 @@
 rootProject.name = "otusJava"
 include("HW01-gradle")
+<<<<<<< Updated upstream
 include("HW02-generics-collections")
 
 
+=======
+include("HW02-generics-colletions")
+>>>>>>> Stashed changes
 
 pluginManagement {
     val jgitver: String by settings
