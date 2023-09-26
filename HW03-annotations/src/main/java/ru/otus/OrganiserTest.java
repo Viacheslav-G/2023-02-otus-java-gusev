@@ -51,18 +51,27 @@ public class OrganiserTest {
 
     }
     @Test
-    public void testSetDeadlineBeforeNow(){
-        if (organiser.getTasks().size() > 0){
+    public void testSetDeadlineBeforeNow() {
+        if (organiser.getTasks().size() > 0) {
             Task anyTask = organiser.getTasks().keySet().iterator().next();
             anyTask.setDeadline(LocalDate.now().minusDays(1));
-        }
-        else{
+        } else {
             organiser.addTask(new Task(true, true, "Write a short essay in English"), "IELTS preparation");
             Task anyTask = organiser.getTasks().keySet().iterator().next();
             anyTask.setDeadline(LocalDate.now().minusDays(1));
         }
-
     }
+    @Test
+    public void testSetCompleted(){
+            Task anyTask = new Task(true, true, "Some stuff to do");
+            anyTask.setCompleted(true);
+        }
 
+    @Test
+    public void testAddCompleted(){
+        Task anyTask = new Task(true, true, "Some stuff to do");
+        anyTask.setCompleted(true);
+        organiser.addTask(anyTask, "Looks like I have already done this");
+    }
 
 }

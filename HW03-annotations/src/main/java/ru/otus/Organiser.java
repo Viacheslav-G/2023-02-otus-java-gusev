@@ -11,10 +11,13 @@ public class Organiser {
 
     public Organiser(){tasks = new HashMap<Task, String>();}
 
-    public void addTask(Task task, String notes){
-        tasks.put(task, notes);
-    }
+    public void addTask(Task task, String notes) {
 
+        if (task.isCompleted() == true) {
+            throw new IllegalArgumentException("Cannot add already completed task");
+        }
+        else tasks.put(task, notes);
+    }
     public HashMap<Task, String> getAllTasks() {
         return tasks;
     }

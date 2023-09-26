@@ -35,6 +35,8 @@ public class Task {
         return description;
     }
 
+    public boolean isCompleted() {return completed;}
+
     public void setDeadline(LocalDate deadline) {
 
         if (deadline != null && deadline.isBefore(LocalDate.now())) {
@@ -49,7 +51,7 @@ public class Task {
     }
 
     @Override
-public String toString() {
+    public String toString() {
         return "Task:"
                 + description + ";" + (this.isUrgent  ? "Urgent;" : ";")
                 + (this.isImportant ? "Important;" : ";")
