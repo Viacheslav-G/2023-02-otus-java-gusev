@@ -43,3 +43,5 @@ hw1.txt
 #OS files
 .DS_Store
 *CustomerDemo.java
+*TaskDemo.java
+*Spending.java
