@@ -3,6 +3,7 @@
 
 # Log file
 *.log
+/logs/*
 
 # BlueJ files
 *.ctxt
@@ -43,5 +44,7 @@ hw1.txt
 #OS files
 .DS_Store
 *CustomerDemo.java
-*TaskDemo.java
+
 *Spending.java
+*TaskDemo.java
+
